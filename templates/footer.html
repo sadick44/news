@@ -1,0 +1,55 @@
+<div class="container center">
+    <footer class="mx-5 mb-1" style=" border-radius: 12px;">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-sm-4 mt-5 text-white">
+                    <h3>Le Souverain</h3>
+                    <p>Le journal <span style="font-family: italic">Le souverain</span> vous informe autrement.
+                        Son but est d'être juste et sûr sur ses informations.
+                    </p>
+                </div>
+    
+                <div class=" offset-1 col-md-7 mt-5">
+                    <div class="row">
+                        <div id="form" class="col-md-12">
+                            <form method="POST">
+                                {% csrf_token %}
+                                <div class="input-group mr-5">
+                                    <input type="email" placeholder="Votre email"
+                                           class="form-control p-3 bg-white border-0 mt-2" required>
+    
+                                    <div class="input-group-append">
+                                        <input type="submit" class="btn btn-danger border-0 mt-2" value="S'inscrire">
+                                    </div>
+    
+                                </div>
+    
+                            </form>
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="col-md-4 mt-5 ">
+                            <ul class="list-unstyled">
+                                <li class="text-white nav-link "><a href="#">Partenaires</a></li>
+                                <li class="nav-link"><a href="#">Réseaux sociaux</a></li>
+                                <li class="nav-link"><a href="#">Notre site</a></li>
+                            </ul>
+                        </div>
+    
+                        <div class="col-md-4 mt-5">
+                            <ul class="list-unstyled">
+                                <li class="text-white nav-link"><a href="#">A propos de nous</a></li>
+                                <li class="nav-link"><a href="#">Contactez-nous</a></li>
+                                <li class="nav-link"><a href="#">Nos articles</a></li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    
+    </footer>
+    
+</div>

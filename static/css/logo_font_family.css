@@ -1,0 +1,10 @@
+#logo{
+    font-family: 'Fasthand', cursive;
+    font-size: 30px;
+    }
+
+@media screen and (min-width: 900px) {
+  .footer {
+    padding: 1rem 3rem;
+  }
+}

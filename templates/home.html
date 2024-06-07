@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/logo_font_family.css' %}">
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'js/navbar/search_bar_ajustment.js' %}"></script>
+<script src="{% static 'js/banner_setter.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="my-5">
+        <h2 class="pl-5 ml-5 mb-5">A la une des actualités</h2>
+        <div class="row">
+            {% for limited in limited_daily %}
+            <div class="col-md-1 d-none ">
+                    <img src="{{ limited.image.url }}" id="banner{{ forloop.counter }}" alt="No image" style="width: 18rem;">
+            </div>
+            {% endfor %}
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-sm-9 d-inline" id="main_banner">
+                {% for img in first_image %}
+                  <a href="clicked_image" id="image_clickable"> <img src="{{ img.image.url }}" style="width: 100%;" id="main_display"
+                     alt="La souvrainété tchadienne dépend que des tchadiens">
+                 </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="row mt-5">
+
+        {% for new in daily_news %}
+        <div class="col-sm mt-5">
+            <div class="card" style="width: 18rem;">
+                <img src="{{ new.image.url }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ new.title }}</h5>
+                    <p class="card-text">{{ new.description|truncatewords:4}}</p>
+                    <a href="{% url 'detail_article' new.pk %}" class="btn btn-primary">Voir plus de details</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-5">
+   <div class="col-md-8">
+    <h2>{{ article.title }} </h2>
+        <samp> Rédigé par Le Souverain: {{ article.date_published|date:'d-m-Y'}}</samp>
+    <hr>
+    <img src="{{ article.image.url }}" width="100%" class="pb-5" alt="">
+    <samp>{{ article.description }}</samp>
+   </div>
+    <h3 class="mt-5">Articles Similaires</h3>
+</div>
+
+
+
+{% endblock %}
